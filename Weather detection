@@ -1,0 +1,7 @@
+import requests
+a="9205a1526b38f92acced1065385d4659"
+b="https://api.openweathermap.org/data/2.5/weather"
+c=input("enter city name: ")
+response= requests.get(url=b,params={"q":c,"appid":a,"units":"metric"})
+weather=response.json()
+print(c,"temp is",weather['main']['temp'])
